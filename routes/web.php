@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MonitorController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MonitorController::class, 'index'])->name('monitor');
